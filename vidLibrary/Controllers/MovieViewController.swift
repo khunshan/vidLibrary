@@ -148,9 +148,9 @@ extension MovieViewController: UITableViewDataSource {
         //Configure View Model
         let cellModelView = MovieCellViewModel(movie: movieModel?.fetch(at: indexPath.row))
         
-        
         //Configure Cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        
         //Flag
         let isSelected = (indexPath.row == selectedIndexPath?.row)
         cell.configure(cellViewModel: cellModelView, isSelected: isSelected, segmentIndex: self.segIndex)

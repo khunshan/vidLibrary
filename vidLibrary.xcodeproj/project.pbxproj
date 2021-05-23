@@ -29,8 +29,8 @@
 		7BA9B5411FEA3DC100843C65 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA9B5401FEA3DC100843C65 /* DataCenter.swift */; };
 		7BA9B5431FEA44EC00843C65 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA9B5421FEA44EC00843C65 /* Movie.swift */; };
 		7BE1DCCC1FEBF1850028DFCC /* FirebaseCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE1DCCB1FEBF1850028DFCC /* FirebaseCenter.swift */; };
-		7BE1DCD31FEBF3C80028DFCC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BE1DCD21FEBF3C80028DFCC /* GoogleService-Info.plist */; };
 		7BE1DCD51FEC24F80028DFCC /* JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE1DCD41FEC24F80028DFCC /* JSONMapper.swift */; };
+		7BE43177265B135A001286B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BE43176265B135A001286B1 /* GoogleService-Info.plist */; };
 		7BFC57821FEA45D1009C89A9 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC57831FEA45D1009C89A9 /* SwiftyJSON.framework */; };
 		7BFC57841FEA45D5009C89A9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC57851FEA45D5009C89A9 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
@@ -82,8 +82,8 @@
 		7BA9B5401FEA3DC100843C65 /* DataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 		7BA9B5421FEA44EC00843C65 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		7BE1DCCB1FEBF1850028DFCC /* FirebaseCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCenter.swift; sourceTree = "<group>"; };
-		7BE1DCD21FEBF3C80028DFCC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7BE1DCD41FEC24F80028DFCC /* JSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapper.swift; sourceTree = "<group>"; };
+		7BE43176265B135A001286B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7BFC57831FEA45D1009C89A9 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BFC57851FEA45D5009C89A9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAB97BC3E911BB81F42262A2 /* Pods-vidLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vidLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-vidLibrary/Pods-vidLibrary.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		7BA9B4FE1FEA362D00843C65 = {
 			isa = PBXGroup;
 			children = (
-				7BE1DCD21FEBF3C80028DFCC /* GoogleService-Info.plist */,
+				7BE43176265B135A001286B1 /* GoogleService-Info.plist */,
 				7BA9B5091FEA362E00843C65 /* vidLibrary */,
 				7BA9B51E1FEA362E00843C65 /* vidLibraryTests */,
 				7BA9B5291FEA362E00843C65 /* vidLibraryUITests */,
@@ -291,7 +291,6 @@
 				7BA9B5041FEA362E00843C65 /* Frameworks */,
 				7BA9B5051FEA362E00843C65 /* Resources */,
 				77DFB019DCB4C1C315ABC846 /* [CP] Embed Pods Frameworks */,
-				B2B517147A926BF69EB65774 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -390,7 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BA9B5151FEA362E00843C65 /* LaunchScreen.storyboard in Resources */,
-				7BE1DCD31FEBF3C80028DFCC /* GoogleService-Info.plist in Resources */,
+				7BE43177265B135A001286B1 /* GoogleService-Info.plist in Resources */,
 				7BA9B5121FEA362E00843C65 /* Assets.xcassets in Resources */,
 				7BA9B5101FEA362E00843C65 /* Main.storyboard in Resources */,
 			);
@@ -437,11 +436,17 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-vidLibrary/Pods-vidLibrary-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-vidLibrary/Pods-vidLibrary-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseDatabase/FirebaseDatabase.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -449,31 +454,22 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDatabase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vidLibrary/Pods-vidLibrary-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B2B517147A926BF69EB65774 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vidLibrary/Pods-vidLibrary-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-vidLibrary/Pods-vidLibrary-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -670,7 +666,7 @@
 				DEVELOPMENT_TEAM = VMKP4V7C56;
 				INFOPLIST_FILE = vidLibrary/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tin.demo.vidLibrary;
+				PRODUCT_BUNDLE_IDENTIFIER = khunshan.demo.vidLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -686,7 +682,7 @@
 				DEVELOPMENT_TEAM = VMKP4V7C56;
 				INFOPLIST_FILE = vidLibrary/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tin.demo.vidLibrary;
+				PRODUCT_BUNDLE_IDENTIFIER = khunshan.demo.vidLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
